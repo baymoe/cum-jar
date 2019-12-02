@@ -114,10 +114,10 @@ public class App {
                                     // set random integer to select jar image by index
                                     int random = (int) (Math.random() * jars.size());
 
-                                    // send jar to all channel
+                                    // send jar to all channels
                                     serverTextChannel.sendMessage(jarEmbed.setImage(jars.get(random)));
                                     try {
-                                        Thread.sleep(200L);
+                                        Thread.sleep(200);
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
@@ -181,7 +181,7 @@ public class App {
                         serverTextChannel.sendMessage(jarEmbed.setImage(jars.get(random)));
 
                         try {
-                            Thread.sleep(200L);
+                            Thread.sleep(200);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
