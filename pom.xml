@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.riezebos.robin</groupId>
-    <artifactId>cumjar</artifactId>
+    <artifactId>cum-jar</artifactId>
     <version>alpha</version>
 
     <properties>
@@ -50,7 +50,7 @@
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                             <manifestEntries>
-                                <Main-Class>net.riezebos.robin.cumjar.App</Main-Class>
+                                <Main-Class>moe.bay.cumjar.App</Main-Class>
                             </manifestEntries>
                         </transformer>
                     </transformers>
