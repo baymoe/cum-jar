@@ -53,6 +53,13 @@ public class Listener implements MessageCreateListener, ServerJoinListener, Serv
                                 .setFooter("Jar no. " + i));
                     } else {
                         if (u.isAdmin()) {
+                            if (args.get(1).equals("dm")) {
+                                final String[] dmsg = {""};
+                                args.subList(2, args.size() - 1).forEach(str -> {
+                                    dmsg[0] = dmsg[0] + str + " ";
+                                });
+                                System.out.print(dmsg[0]);
+                            }
                             if (args.get(1).equals("add")) {
                                 String jar;
                                 if (message.getAttachments().size() > 0) {

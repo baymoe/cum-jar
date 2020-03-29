@@ -18,7 +18,7 @@ public class CumServer {
     public void setVerificationChannel(String id) {}
 
     public ServerTextChannel getVerificationChannel() {
-
+        return null;
     }
 
 }
