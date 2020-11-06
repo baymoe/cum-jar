@@ -115,7 +115,7 @@ public class Listener implements MessageCreateListener, ServerJoinListener, Serv
                                                 } else {
                                                     System.out.println("Adding role " + role.getName() + " to user " + member.getDiscriminatedName());
                                                     member.addRole(role, "role addition by " + u.getUser().getDiscriminatedName());
-                                                    event.getChannel().sendMessage("Role " + role.getMentionTag() + " added to user " + member.getMentionTag());
+                                                    event.getChannel().sendMessage("Role " + role.getName() + " added to user " + member.getDiscriminatedName());
                                                 }
                                             });
                                         }

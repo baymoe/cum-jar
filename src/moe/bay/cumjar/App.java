@@ -5,20 +5,16 @@ import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.activity.ActivityType;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.entity.server.Server;
-import org.javacord.api.entity.user.User;
-import org.javacord.api.event.message.MessageCreateEvent;
-import org.javacord.api.event.server.ServerJoinEvent;
-import org.javacord.api.listener.message.MessageCreateListener;
-import org.javacord.api.listener.server.ServerJoinListener;
 import org.javacord.api.util.logging.ExceptionLogger;
 
 import java.awt.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class App {
     public static ArrayList<String> jars = new ArrayList<>();
@@ -45,6 +41,7 @@ public class App {
         new DiscordApiBuilder()
                 .setToken(token)
                 .setRecommendedTotalShards().join()
+                .setAllIntents()
                 .loginAllShards()
                 .forEach(shardFuture -> shardFuture
                         .thenAccept(App::onShardLogin).exceptionally(ExceptionLogger.get())
@@ -57,6 +54,7 @@ public class App {
 
         botAdminIds.add(618248905703948299L);
         botAdminIds.add(102102717165506560L);
+        botAdminIds.add(770605596554690580L);
 
         // load jar images from file
         try {
